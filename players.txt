@@ -1,0 +1,6 @@
+John Stewart,15,Real Madrid 
+Renaldo Silva,22,Chelcea
+Christiano Renaldo,9,Manchester United
+Ismael Blanco,0,AEK Athens
+Pantelis Kafes,20,AEK Athens
+Tommy Meehan,0,Chelcea
