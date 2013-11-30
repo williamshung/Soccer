@@ -52,10 +52,10 @@ public class SoccerPlayerClient
              
             }
             SoccerPlayer bestave=player[0];
-            double maxave=0.0;
+            double maxave=0.1;
             for(int e=0;e<player.length;e++)
             {
-               if((maxave<player[e].getAveGoals())&&(player[e].getGames()==0));
+               if((maxave<player[e].getAveGoals())&&(player[e].getGames()!=0));
                {
                   maxave=player[e].getAveGoals();
                   bestave=player[e];

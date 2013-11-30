@@ -58,10 +58,10 @@ public class SoccerPlayer
    public void setGoals(int go)
    {
       goals=go;
-      if((goals<=0)||(goals<=0))
+      if((goals>0)&&(games>0))
       avegoals=goals/games;
-      else
-      avegoals=1000000;
+      //else
+      //avegoals=1000000;
    }
    public void setGames(int ga)
    {
