@@ -3,10 +3,12 @@ import java.util.Scanner;
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
+import java.text.*;
 public class SoccerPlayerClient
 {
    public static void main(String[]arg)
-   {  
+   {    
+      DecimalFormat df = new DecimalFormat("0.000");
       int a=0;
       String[] stats=new String[6];
       //stats[1]="check";
@@ -52,10 +54,11 @@ public class SoccerPlayerClient
              
             }
             SoccerPlayer bestave=player[0];
-            double maxave=0.1;
+            double maxave=0.0;
             for(int e=0;e<player.length;e++)
             {
-               if((maxave<player[e].getAveGoals())&&(player[e].getGames()!=0));
+               System.out.println(player[e]);
+               if(maxave<player[e].getAveGoals()&&player[e].getAveGoals()1000000.0)
                {
                   maxave=player[e].getAveGoals();
                   bestave=player[e];
@@ -63,7 +66,7 @@ public class SoccerPlayerClient
                
             } 
             System.out.println("The player with the highest average is "+bestave.getName());
-            System.out.println("The Highest average is "+maxave);
+            System.out.println("The Highest average is "+df.format(maxave));
                   
    }
    

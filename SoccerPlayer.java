@@ -2,7 +2,7 @@
 import java.text.*;
 public class SoccerPlayer
 {
-   DecimalFormat df = new DecimalFormat("#.##");
+   DecimalFormat df = new DecimalFormat("0.000");
    String name=" ";
    int goals=0;
    double avegoals=0;
@@ -59,9 +59,9 @@ public class SoccerPlayer
    {
       goals=go;
       if((goals>0)&&(games>0))
-      avegoals=goals/games;
-      //else
-      //avegoals=1000000;
+      avegoals=goals/(double)games;
+      else
+      avegoals=1000000;
    }
    public void setGames(int ga)
    {
@@ -77,7 +77,7 @@ public class SoccerPlayer
    }
    public String toString()
    {
-      String output="The players name is "+name+" Goals scored "+goals+" Games played "+games+" The team they play for is "+team+" Their jersey number is "+playerID+" Their id is";
+      String output="The players name is "+name+" Goals scored "+goals+" Games played "+games+" The team they play for is "+team+" Their jersey number is "+playerID+" Their average goals are "+df.format(avegoals);
       return output;
    }
    public boolean equals(SoccerPlayer sp)
